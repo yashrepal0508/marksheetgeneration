@@ -1,0 +1,158 @@
+                     // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  MARKSHEET GANERATION PROJECT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int rollno,marks,pps,math,beee,phy,cad,phypra,totalphy,mathpra,totalmath,beeepra,totalbeee,cadpra,totalcad,ppspra,totalpps,total,year,result;
+    char studentname[30], collegename[30];
+    float per;
+
+printf("\n Enter name of Student : ");
+scanf("\n %s",&studentname);
+
+printf("\n Enter Roll No. : ");
+scanf("\n %d",&rollno);
+
+printf("\n Enter name of College : ");
+scanf("\n %s",&collegename);
+
+printf("\n Enter Year : ");
+scanf("\n %d",&year);
+
+ysr:
+printf("\n Enter Marks of Engineering Physics : ");
+scanf("\n %d",&phy);
+if(phy>=70)
+{
+  printf("\n Wrong Data Please Enter less than 70");
+  goto ysr;
+}
+
+rep:
+printf("\n Enter Practical Marks of Engineering Physics : ");
+scanf("\n %d",&phypra);
+if(phypra>=30)
+{
+  printf("\n Wrong Data Please Enter less than 30");
+  goto rep;
+}
+
+totalphy=phy+phypra;
+printf("\n Total Marks of physics :%d",totalphy);
+
+ysr1:
+  printf("\nEnter Marks of Engineering Mathematics-II: ");
+  scanf("%d",&math);
+  if(math>=70){
+   printf("\n Wrong Data Please Enter less than 70 ");
+  goto ysr1;
+  }
+
+rep1:
+printf("\n Enter Practical Marks of Engineering Mathematics-II : ");
+scanf("\n %d",&mathpra);
+if(mathpra>=30)
+{
+   printf("\n Wrong Data Please Enter less than 30");
+   goto rep1;
+}
+
+totalmath=math+mathpra;
+printf("\n Total Marks of Math:%d",totalmath);
+
+ysr2:
+printf("\n Enter Marks of BEEE : ");
+scanf("\n %d",&beee);
+if(beee>=70)
+{
+  printf("\nWrong Data Please Enter less than 70 ");
+  goto ysr2;
+}
+
+rep2:
+printf("\n Enter Practical Marks of BEEE : ");
+scanf("\n %d",&beeepra);
+if(beeepra>=30)
+{
+   printf("\n Wrong Data Please Enter less than 30");
+   goto rep2;
+}
+
+totalbeee=beee+beeepra;
+printf("\n Total Marks of BEEE :%d",totalbeee);
+
+ysr3:
+printf("\n Enter Marks of EG & CAD : ");
+scanf("\n %d",&cad);
+if(cad>=70)
+{
+  printf("\n Wrong Data Please Enter less than 70");
+  goto ysr3;
+}
+
+rep3:
+printf("\n Enter Practical Marks of EG & CAD : ");
+scanf("\n %d",&cadpra);
+if(cadpra>=30)
+{
+   printf("\n Wrong Data Please Enter less than 30");
+   goto rep3;
+}
+
+totalcad=cad+cadpra;
+printf("\nTotal Marks of EG & CAD is:%d ",totalcad);
+
+ysr4:
+printf("\nEnter pps Marks:");
+scanf("\n %ld",&pps);
+if(pps>=70)
+{
+  printf("\n Wrong Data Please Enter less than 70");
+  goto ysr4;
+}
+
+rep4:
+printf("\n Enter Practical Marks of PPS : ");
+scanf("\n %d",&ppspra);
+if(ppspra>=30)
+{
+   printf("\n Wrong Data Please Enter less than 30");
+   goto rep4;
+}
+
+totalpps=pps+ppspra;
+printf("\n Total Marks of PPS is :%d",totalpps);
+
+total=totalphy+totalmath+totalbeee+totalcad+totalpps;
+printf("\n Total = %d",total);
+
+per=total/5.0;
+printf("\n Percentage=%.2f",per);
+
+printf("\n\n\n\t\t\t\t\t\tWelcome to Punyashlok Ahilyadevi Holkar, Solapur University.\n");
+printf("\n========================================================================================================================================================|\n");
+printf("\n Name Of College : %s\t\t\t\t\t\t\t Year  :  %d \t\t\t\t\t\t\t\t\t|",collegename,year );
+printf("\n........................................................................................................................................................|\n");
+printf("\n Name Of Student : %s \t\t\t\t\t\t Roll No.\t   :  %ld  \t\t\t\t\t\t\t\t|\n",studentname,rollno );
+printf("========================================================================================================================================================|\n");
+
+printf("\n Subject Name \t\t\t|\t Marks \t\t|\tPractical Marks\t\t|\tTotal Marks\t|\tObtained Marks\t\t\t| ");
+printf("\n........................................................................................................................................................|\n");
+printf("\n Engineering Physics  :\t\t|\t%d  \t\t|\t\t%d  \t\t|\t\t100  \t|\t%d\t\t\t\t|",phy,phypra,totalphy);
+printf("\n Engineering Mathematics :\t|\t%d  \t\t|\t\t%d  \t\t|\t\t100 \t|\t%d\t\t\t\t|",math,mathpra,totalmath);
+printf("\n Electrical & Electronics :\t|       %d  \t\t|\t\t%d  \t\t|\t\t100  \t|\t%d\t\t\t\t|",beee,beeepra,totalbeee);
+printf("\n Engineering Graphics  :\t|\t%d  \t\t|\t\t%d  \t\t|\t\t100  \t|\t%d\t\t\t\t|",cad,cadpra,totalcad);
+printf("\n PPS  :\t\t\t\t|\t%d  \t\t|\t\t%d  \t\t|\t\t100 \t|\t%d\t\t\t\t|",pps,ppspra,totalpps);
+printf("\n........................................................................................................................................................|\n");
+printf("\n Total Marks Obtained\t|\t Out Of Marks\t|\t Percentage\t|\tResult\t|\t\t\t\t\t\t\t\t\t|");
+printf("\n________________________________________________________________________________________________________________________________________________________|\n");
+printf("\n   \t%d\t\t|\t\t500 \t|\t  %.2f \t|\tPass\t|\t\t\t\t\t\t\t\t\t|",total,per,result);
+printf("\n........................................................................................................................................................|\n");
+printf("\n \t\t\t\t\t\t\tCongratulations You are Pass!!!!!!!!!!!!!!!\t\t\t\t\t\t\t\t|\n");
+printf("\n========================================================================================================================================================|\n");
+printf("\n \t*MADE BY YASH REPAL*");
+printf("\n ......................................\n\n");
+    return 0;
+
+}
